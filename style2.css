@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "press start 2p";}
+header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        z-index: 100;
+        }
+.navbar a {
+        font-size: 18px;
+        font-family: 'Courier New', Courier, monospace;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+        border-bottom: 2px solid transparent;
+        transition: .5s;
+        }
+
+        
+
+
+body {
+        height: 100vh;
+        background: url('image.png') center/ cover;
+        }
+.y{
+        color: rgb(89, 230, 34);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+}
+
+.container {
+        position: relative;
+        margin-top: 60px;
+        height: 100%;
+        padding: 50px 5%;
+        background: rgba(255, 255, 255, .1);
+        border-radius: 30px;
+        backdrop-filter: blur(30px);
+        transform: scale(0);
+        animation: zoom-in 1s ease forwards;
+        }
+    p {
+        color: rgb(227, 227, 227);
+        font-family: 'Courier New', Courier, monospace;
+        font-style:normal;
+        font-size: 18px;
+        }
+.w {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease;
+    animation: zoom-in 1s ease forwards;
+}
+.w img {
+    flex-shrink: 0;
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.w p {
+    flex: 1;
+    font-size: 18px;
+    color: rgb(227, 227, 227);
+    font-family: 'Courier New', Courier, monospace;
+}
+        @keyframes zoom-in {
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slide-in {
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 30px 3%;
+            }
+            .w {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                gap: 20px;
+            }
+            .w img {
+                width: 300px;
+            }
+            header {
+                padding: 18px 3%;
+            }
+            .navbar a {
+                font-size: 16px;
+                margin-left: 20px;
+            }
+            .y {
+                font-size: 22px;
+            }
+            p, .w p {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 10px 1%;
+                margin-top: 40px;
+            }
+            .w {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+            .w img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+            header {
+                padding: 12px 2%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar a {
+                font-size: 15px;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            .y {
+                font-size: 18px;
+            }
+            p, .w p {
+                font-size: 14px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
