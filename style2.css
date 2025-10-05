@@ -18,6 +18,22 @@ header {
         font-family: 'Courier New', Courier, monospace;
         z-index: 100;
         }
+.hamburger{
+        display: none;
+        color: #fff;
+        font-size: 23px;
+}
+.close{
+        display: none;
+}
+
+.logo {
+        font-size: 25px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        }
+
 .navbar a {
         font-size: 18px;
         font-family: 'Courier New', Courier, monospace;
@@ -28,9 +44,6 @@ header {
         border-bottom: 2px solid transparent;
         transition: .5s;
         }
-
-        
-
 
 body {
         height: 100vh;
@@ -80,16 +93,16 @@ body {
     height: auto;
     border-radius: 15px;
 }
-footer{
-        color: #fff;
-        text-align: center;
-}
 
 .w p {
     flex: 1;
     font-size: 18px;
     color: rgb(227, 227, 227);
     font-family: 'Courier New', Courier, monospace;
+}
+footer{
+        color: #fff;
+        text-align: center;
 }
         @keyframes zoom-in {
             100% {
@@ -101,33 +114,6 @@ footer{
             100% {
                 transform: translateY(0);
                 opacity: 1;
-            }
-        }
-        @media (max-width: 900px) {
-            .container {
-                padding: 30px 3%;
-            }
-            .w {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 20px;
-                gap: 20px;
-            }
-            .w img {
-                width: 300px;
-            }
-            header {
-                padding: 18px 3%;
-            }
-            .navbar a {
-                font-size: 16px;
-                margin-left: 20px;
-            }
-            .y {
-                font-size: 22px;
-            }
-            p, .w p {
-                font-size: 16px;
             }
         }
         @media (max-width: 700px) {
@@ -152,17 +138,42 @@ footer{
                 flex-direction: column;
                 align-items: flex-start;
             }
-            .navbar {
+            .hamburger{
+                display: block;
+                position: absolute;
+                right: 20px;
+                top:20px;
+        }
+            .navbar{
+                display: none;
+                position: fixed;
+                top: 0;
+                left:0;
                 width: 100%;
+                height: 100vh;
+                background-color: black;
+                backdrop-filter: blur(10px);
+                padding: 80px 20px 20px;
+        }
+            .navbar:target{
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-            }
+                align-items: center;
+        }
             .navbar a {
-                font-size: 15px;
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
+                margin:15px 0;
+                font-size:18px;
+
+        }
+            .close{
+                display:block;
+                position:absolute;
+                top: 20px;
+                right:20px;
+                color: #fff;
+                font-size: 23px;
+        }
+            
             .y {
                 font-size: 18px;
             }
