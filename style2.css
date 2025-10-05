@@ -80,6 +80,10 @@ body {
     height: auto;
     border-radius: 15px;
 }
+footer{
+        color: #fff;
+        text-align: center;
+}
 
 .w p {
     flex: 1;
