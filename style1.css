@@ -18,6 +18,10 @@ header {
         font-family: 'Courier New', Courier, monospace;
         z-index: 100;
         }
+footer{
+        color: #fff;
+        text-align: center;
+}
 .navbar a {
         font-size: 18px;
         font-family: 'Courier New', Courier, monospace;
