@@ -18,24 +18,35 @@ header {
         font-family: 'Courier New', Courier, monospace;
         z-index: 100;
         }
+.hamburger{
+        display: none;
+        color: #fff;
+        font-size: 23px;
+}
+.close{
+        display: none;
+}
+
+.logo {
+        font-size: 25px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        }
 
 .navbar a {
         font-size: 18px;
         font-family: 'Courier New', Courier, monospace;
         color: #fff;
         text-decoration: none;
-        padding: auto;
         font-weight: 500;
         margin-left: 35px;
         border-bottom: 2px solid transparent;
         transition: .5s;
         }
 
-
-
-
 body {
-        height: 150vh;
+        height: 100vh;
         background: url('image.png') center/ cover;
         }
 .y{
@@ -43,23 +54,28 @@ body {
         font-family: 'Courier New', Courier, monospace;
         font-size: 30px;
 }
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:last baseline;
+}
 
 .container {
         position: relative;
-        margin-top: 60px;
-        height: 60%;
+        margin: 60px auto;
+        min-height: 100vh;
         padding: 50px 5%;
         background: rgba(255, 255, 255, .1);
         border-radius: 30px;
-        display:grid scroll center;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 50px;
+        grid-gap: 20px;
         border: 2px solid rgba(255, 255, 255, .2);
         backdrop-filter: blur(30px);
         transform: scale(0);
         animation: zoom-in 1s ease forwards;
         }
-.c {    position: relative;
+.c {
         background: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
         padding: 20px;
@@ -89,17 +105,9 @@ body {
         font-size: 18px;
         }
 @media (max-width: 700px) {
-    #cc{
-        display:block;
-        position:absolute;
-        right:20px;
-        top:20px;
-        z-index:1000;
-    }
         .c {
             display: grid;
             grid-template-columns: 1fr; 
-            padding: 15px 2%;
             flex-direction: column;
             text-align: center;
             justify-content: center;
@@ -115,10 +123,7 @@ body {
             font-size: 30px;
             }
         }
-footer{
-        color: #fff;
-        text-align: center;
-}
+
 @media (max-width: 700px) {
     .container {
         grid-template-columns: 1fr;
@@ -127,28 +132,45 @@ footer{
     }
     header {
         padding: 12px 2%;
-        position:relative;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
     }
     .navbar {
-        display:none;
-        position:absolute;
-        top:60px;
-        right:20px;
-        background: black;
-        padding:10px;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 80px 20px 20px;
     }
-    #cc:target + .navbar {
-        display:flex block;
+    .navbar:target {
+        display: flex;
         flex-direction: column;
         align-items: center;
-
+    }
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
     }
     .navbar a {
-        font-size: 15px;
-        margin-left:10px 0;
-        width:100%;
+        margin: 15px 0;
+        font-size: 18px;
         text-align: center;
-        margin-bottom: 10px;
     }
     .y {
         font-size: 18px;
