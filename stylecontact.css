@@ -16,17 +16,12 @@ h1{
         color:#fff;
 }
 
-footer{
-        color: #fff;
-        text-align: center;
-}
 .container {
         position: relative;
         height: 100%;
         padding: 50px 5%;
         background: rgba(255, 255, 255, .1);
         border-radius: 30px;
-        border: 2px solid rgba(255, 255, 255, .2);
         backdrop-filter: blur(30px);
         transform: scale(0);
         animation: zoom-in 1s ease forwards;
@@ -115,31 +110,36 @@ header {
         box-shadow: 0 0 10px #fff;
         color: #333;
         }
+footer{
+        color: #fff;
+        text-align: center;
+}
 
 @media (max-width: 700px) {
-                .home {
-                        flex-direction: column;
-                        text-align: center;
-                        justify-content: center;
+        .home {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
                 }
-                .social-icons {
-                        flex-direction: column;
-                        gap: 20px;
-                        height: auto;
-                        margin-top: 60px;
+        .social-icons {
+                flex-direction: column;
+                gap: 20px;
+                height: auto;
+                margin-top: 60px;
                 }
-                .social-icons a {
-                        width: 120px;
-                        height: 120px;
-                        font-size: 60px;
-                        margin: 10px 0;
-                        border-width: 6px;
+        .social-icons a {
+                width: 120px;
+                height: 120px;
+                font-size: 60px;
+                margin: 10px 0;
+                border-width: 6px;
                 }
-                .home-detail{
-                        margin-top: 120px;
-                        font-size: 22px;
+        .home-detail{
+                margin-top: 120px;
+                font-size: 22px;
                 }
         }
+
 
         /* Keyframe Animations */
         @keyframes zoom-in {
