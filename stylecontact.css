@@ -140,8 +140,6 @@ footer{
                 }
         }
 
-
-        /* Keyframe Animations */
         @keyframes zoom-in {
             100% {
                 transform: scale(1);
