@@ -16,6 +16,9 @@ footer{
         color: #fff;
         text-align: center;
 }
+h1{
+        color:#ffffff;
+}
 
 .container {
         position: relative;
@@ -137,10 +140,6 @@ header {
                         font-size: 22px;
                 }
         }
-h1{
-        color:#ffffff;
-}
-
 
         /* Keyframe Animations */
         @keyframes zoom-in {
