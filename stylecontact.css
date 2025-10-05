@@ -12,14 +12,14 @@ body {
         height: 100vh;
         background: url('image.png') center/ cover;
         }
+h1{
+        color:#fff;
+}
+
 footer{
         color: #fff;
         text-align: center;
 }
-#fh1{
-        color:#ffffff;
-}
-
 .container {
         position: relative;
         height: 100%;
