@@ -12,14 +12,14 @@ body {
         height: 100vh;
         background: url('image.png') center/ cover;
         }
-h1{
-        color:#fff;
+p{
+        color: #fff;
 }
 
 .container {
         position: relative;
         height: 100%;
-        padding: 50px 5%;
+        padding: 50px 10%;
         background: rgba(255, 255, 255, .1);
         border-radius: 30px;
         backdrop-filter: blur(30px);
@@ -45,6 +45,22 @@ header {
         z-index: 100;
         }
 
+.hamburger{
+        display: none;
+        color: #fff;
+        font-size: 23px;
+}
+.close{
+        display: none;
+}
+
+.logo {
+        font-size: 25px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        }
+
 .navbar a {
         font-size: 18px;
         font-family: 'Courier New', Courier, monospace;
@@ -56,7 +72,6 @@ header {
         transition: .5s;
         }
 
-        
 .home {
         display: flex;
         align-items: center;
@@ -108,14 +123,45 @@ header {
 .social-icons a:hover {
         background: #fff;
         box-shadow: 0 0 10px #fff;
-        color: #333;
+        color: #e5dddd;
         }
-footer{
-        color: #fff;
-        text-align: center;
-}
 
 @media (max-width: 700px) {
+        .hamburger{
+                display: block;
+                position: absolute;
+                right: 20px;
+                top:20px;
+        }
+        .navbar{
+                display: none;
+                position: fixed;
+                top: 0;
+                left:0;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                backdrop-filter: blur(10px);
+                padding: 80px 20px 20px;
+        }
+        .navbar:target{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
+        .navbar a {
+                margin:15px 0;
+                font-size:18px;
+
+        }
+        .close{
+                display:block;
+                position:absolute;
+                top: 20px;
+                right:20px;
+                color: #fff;
+                font-size: 23px;
+        }
         .home {
                 flex-direction: column;
                 text-align: center;
@@ -140,6 +186,8 @@ footer{
                 }
         }
 
+
+        /* Keyframe Animations */
         @keyframes zoom-in {
             100% {
                 transform: scale(1);
